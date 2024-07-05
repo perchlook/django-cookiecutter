@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = ""
+authors = ["Victor Neo <victor@perchlook.com>"]
+readme = "README.md"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "{{ cookiecutter.project_slug }}.test_settings"
+# -- recommended but optional:
+python_files = ["tests.py"]
+
+[tool.ruff.lint]
+select = [
+    # isort
+    "I001"
+]
+fixable = ["ALL"]
+
+[tool.ruff.flake8-quotes]
+inline-quotes = "single"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
