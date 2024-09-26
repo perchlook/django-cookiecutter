@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{% block title %}Employee Appreciation Day 2024{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/app.css' %}" />
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
 
@@ -13,38 +13,23 @@
     <script src="{% static 'js/alpine.min.js' %}" defer></script>
 
  {% block meta %}
-    <meta property="og:title" content="Employee Appreciation Day 2024 by Perch" />
+    <meta property="og:title" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gracias.perchlook.com" />
-    <meta property="og:image" content="https://gracias.perchlook.com{% static 'img/logo.png' %}" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
 
-    <meta name="twitter:title" content="Employee Appreciation Day 2024 by Perch">
-    <meta name="twitter:description" content="Give thanks to your team today.">
-    <meta name="twitter:image" content="https://gracias.perchlook.com{% static 'img/logo.png' %}">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
     <meta name="twitter:card" content="summary_large_image">
 {% endblock %}
 
 {% block head %}
 {% endblock %}
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4836LKEK34"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-4836LKEK34');
-    </script>
   </head>
   <body class="h-full">
-    <main>
-      <div class="min-h-full">
-        <main class="h-2/3">
-          <div id="content" class="mx-auto">
-            {% block content %}{% endblock %}
-          </div>
-        </main>
-      </div>
+    <main class="">
+      {% block content %}{% endblock %}
     </main>
   </body>
 </html>

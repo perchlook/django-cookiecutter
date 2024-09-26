@@ -8,7 +8,7 @@ from .models import User
 def signup(request):
     if request.user.is_authenticated:
         print('user authenticated')
-        return redirect('/dashboard')
+        return redirect('/')
 
     return render(request, 'users/signup.html')
 
@@ -16,10 +16,10 @@ def signup(request):
 def login_user(request):
     return render(
         request,
-        'users/login_form.html',
+        'users/login.html',
     )
 
 
 def logout_user(request):
     logout(request)
-    return redirect('/login')
+    return redirect('/')
