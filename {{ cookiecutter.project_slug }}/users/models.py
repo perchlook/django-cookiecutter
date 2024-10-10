@@ -8,9 +8,6 @@ class User(AbstractUser, CreatedUpdatedMixin):
     id = models.AutoField(primary_key=True)
     objects: UserManager = UserManager()
 
-    birthday = models.DateField(blank=True, null=True)
-    departure_date = models.DateField(blank=True, null=True)
-
     email = models.EmailField(unique=True)
 
     def __str__(self):
